@@ -2,12 +2,12 @@
 #include <WebSocketsClient.h>
 
 // Wi-Fi bilgileri
-const char* ssid = "TURKSAT-KABLONET-A41A-2.4G";
-const char* password = "dce35953";
+const char* ssid = "your_SSID";
+const char* password = "your_password";
 
 // WebSocket sunucu bilgileri
-const char* websocket_server_host = "192.168.0.22"; // Örneğin: "192.168.1.100"
-const uint16_t websocket_server_port = 8080;
+const char* websocket_server_host = "YOUR_SERVER_IP"; // Example: 192.168.0.22
+const uint16_t websocket_server_port = "YOUR_SERVER_PORT"; //Example: 8080
 
 WebSocketsClient webSocket;
 
@@ -30,7 +30,6 @@ void setup() {
 void loop() {
   webSocket.loop();
 
-  // Her 5 saniyede bir mesaj gönder
   static unsigned long lastTime = 0;
   if (millis() - lastTime > 5000) {
     lastTime = millis();
